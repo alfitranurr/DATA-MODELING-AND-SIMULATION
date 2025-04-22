@@ -1,0 +1,22 @@
+-- Looking at the problem
+SELECT * FROM "staging".dim_product;
+
+-- Setting up schema & table structure
+CREATE SCHEMA core;
+
+CREATE TABLE core.dim_product (
+ Product_PK int,
+ product_id varchar(5),
+ product_name varchar(100),
+ category varchar(50),
+ subcategory varchar(50),
+ brand varchar(50)
+);
+
+TRUNCATE TABLE "staging".dim_product;
+
+DELETE FROM "staging".dim_product WHERE product_id > 'P0057';
+
+
+--looking at the results
+SELECT * FROM core.dim_product;
