@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   postgres:
@@ -6,7 +6,7 @@ services:
     container_name: postgres-server
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: bookfacepepabri11
+      POSTGRES_PASSWORD:
       POSTGRES_DB: mydb
     volumes:
       - postgres-data:/var/lib/postgresql/data
@@ -21,7 +21,7 @@ services:
     container_name: pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: alfitranurr@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: bookfacepepabri11
+      PGADMIN_DEFAULT_PASSWORD:
     volumes:
       - pgadmin-data:/var/lib/pgadmin
     ports:
